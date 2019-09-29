@@ -1,0 +1,149 @@
+@import 'normalize';
+
+* {
+  	box-sizing: border-box;
+}
+
+html, body {
+  	height: 100%;
+  	overflow: hidden;  
+}
+
+body {
+	align-items: center;
+	background-color: black;
+	display: flex;
+	font-family: 'Lato', sans-serif;
+	justify-content: center;
+}
+
+.slider {
+	margin: 0 auto;
+	max-width: 1200px;
+	overflow: hidden;
+	position: relative;
+	text-align: center; 
+
+    .slides {
+		display: flex;  
+		-ms-overflow-style: none;
+		position: relative;
+		overflow-x: auto;
+		scrollbar-width: none !important;
+		scroll-snap-type: x mandatory; 
+		scroll-behavior: smooth;
+		-webkit-overflow-scrolling: touch;
+
+	  	&::-webkit-scrollbar {
+		  	display: none;
+		}
+
+		div {
+			align-items: center;
+			background-color: #eee;
+			display: flex;
+			flex-shrink: 0;
+			height: auto;
+			justify-content: center;
+			margin-right: 50px;
+			max-width: 100%;
+			position: relative;
+			scroll-snap-align: start;
+
+			.arrow {
+			  	background-color: white;
+			  	border-radius: 50%;			    
+			    display: inline-block;
+			    height: 40px;
+			    opacity: .5;
+			    position: absolute;
+			    text-decoration: none;	
+			    top: calc(50% - 20px);		    
+			    width: 40px;
+			    z-index: 2;
+
+			    &:before {
+			    	color: black;
+			    	font-size: 40px;
+			  		font-family: "FontAwesome";
+			  		font-weight: bold;
+			  		position: absolute;			  		
+			  		top: -4px;
+			    }
+
+			    &:hover {
+			    	opacity: 1;
+			    }
+			}
+
+			.arrow-prev {
+			  	left: 10px;	  	
+
+			  	&:before {			  		
+			  		content: "\f104";			  		
+			  		left: 11px;			  		
+			  	}
+			}
+			 
+			.arrow-next{
+			    right: 10px;
+
+			    &:before {			  		
+			  		content: "\f105";			  		
+			  		right: 11px;			  		
+			  	}
+		  	}
+
+		  	h1 {
+		  		background-color: rgba(256, 256, 256, .6);
+		  		color: black;
+		  		font-size: 3vmin;
+		  		font-style: italic;
+		  		left: 0;
+		  		margin: 0;
+		  		padding: 5px 8px;
+		  		position: absolute;
+		  		top: 15px;
+		  		z-index: 2;
+		  	}
+
+			img, object {
+				height: auto;
+				max-width: 100%;
+			}
+		}		
+	} 
+}
+
+.pagination {
+	position: relative;
+	top: -30px;
+
+	> a {
+		align-items: center;
+		background: white;
+		border-radius: 50%;
+		display: inline-flex;		
+		height: 16px;		
+		justify-content: center;		
+		margin-right: 5px;
+		position: relative;
+		opacity: .8;
+		text-decoration: none;
+		width: 16px;
+		
+		&:active {	  	 
+			top: 1px;
+		}
+
+		&:focus {
+			background: yellow;
+		}
+	}
+
+	@media (max-width: 450px) {
+		display: none;
+	}
+}
+
+
