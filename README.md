@@ -2,7 +2,7 @@ Greetings, and welcome to my Neoscape demo slideshow project. Here is some infor
 
 First off, the design. I wanted the imagery to be visually stimulating, so I used a mixture of my visionary abstract artwork (PNGs) and dynamic vectors (SVGs). These images are set against a black background for maximum contrast and no color conflict. Following suit, the pagination and navigation controls are mainly neutral colors to again maximize the pop of the imagery. The controls overlay the image for a seamless design.
 
-In development I employed PHP to allow me to load the images and their titles dynamically from a JSON file. The pagination is linked to the number of images loaded via the JSON file, as is the navigation. The navigation icons are Font Awesome. 
+In development I employed PHP to allow me to load the images and their titles dynamically from a JSON file. The pagination is linked to the number of images loaded via the JSON file, as is the navigation. The navigation icons are Font Awesome. The pagination is hidden under 450px width.
 
 SASS was used in the creation of the CSS file. I love working with SASS for the nesting aspect, as it makes the styles much easier to read. (SASS has a lot of other great features too, but I didn’t use them in this project.) I also included Normalize.css for maximum synchronicity over various browsers. 
 
